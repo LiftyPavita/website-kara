@@ -93,7 +93,12 @@ function openLightbox(index) {
 
 if (galleryImages.length) {
   galleryImages.forEach((image, index) => {
-    image.addEventListener('click', () => openLightbox(index));
+    image.style.cursor = 'pointer';
+    image.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      openLightbox(index);
+    });
   });
 }
 
