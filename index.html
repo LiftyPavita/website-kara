@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A romantic personal website with memories, photos, and a little love note."
+    />
+    <title>A Little Website About Kara ♡</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="loader-ring"></div>
+      <p>Loading your little world...</p>
+    </div>
+
+    <div class="floating-hearts" aria-hidden="true"></div>
+    <div class="cursor-sparkles" aria-hidden="true"></div>
+
+    <div class="welcome-screen" id="welcomeScreen">
+      <div class="welcome-backdrop"></div>
+      <div class="sparkles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="welcome-content reveal">
+        <p class="eyebrow">For you, always</p>
+        <h1>A Little Website About KARA♡</h1>
+        <p class="subtitle">A little place for the beautiful girl.</p>
+        <button class="primary-btn" id="enterBtn">Open Your Little World ♡</button>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="#home" class="brand">♡</a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-menu">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#gallery">doesn't like</a>
+          <a href="#memories">do,don't</a>
+          <a href="#letter">puisi</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Kara Althafunnisa</p>
+            <h1 class="hero-title">bocil imut dengan kebanyakan yappingnya itu.</h1>
+            <p class="hero-text">
+              just a little girl with a big heart, a cute smile, and a thousand little dreams. 🌷💗 she loves pink things, sweet treats, pretty flowers, and all the little things that make life beautiful. 🎀✨
+            </p>
+            <div class="hero-actions">
+              <a href="#about" class="primary-btn">about her.</a>
+              <a href="#letter" class="secondary-btn">puisi.</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="photo-stack photo-stack-main parallax-item">
+              <img src="images/gambar9.png" alt="Main portrait" loading="eager" />
+            </div>
+            <div class="photo-stack photo-stack-small top-left parallax-item">
+              <img src="images/gambar2.jpg" alt="Decorative portrait" loading="lazy" />
+            </div>
+            <div class="photo-stack photo-stack-small bottom-right parallax-item">
+              <img src="images/gambar7.jpg" alt="Decorative portrait" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about-inner">
+          <div class="about-image reveal">
+            <div class="portrait-frame">
+              <img src="images/gambar10.png" alt="A little about you" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <p class="eyebrow">A little Things about you</p>
+            <h2>A Little About You</h2>
+            <p>
+              kara suka banget sama matcha, first one is matcha sobr, and the second matcha mana dimana
+              the third is matcha laidback, and the last one is matcha tomoro.
+            </p>
+            <p>
+              kara juga suka americano loh, kara suka americano fore, daja sama buatannya ija itu katanya wkwk.
+            </p>
+            <p>
+              kara suka banget sama pink, anything about pink, kara suka dubai cuwi nya savor katanya, eh dia juga
+              suka sama lagu panasea, makanya websitenya make lagu panasea, dia cewe pinter loh, she's princess,
+              katanya si dia suka banget di panggil alta karena gada yang panggil dia alta katanya.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery section" id="gallery">
+        <div class="container gallery-feature">
+          <div class="gallery-copy reveal">
+            <h2>Yang enggak Kara suka</h2>
+            <p>
+              Kara gak terlalu suka sama stroberi dan kacang-kacangan yang ukurannya gede-gede katanya.
+            </p>
+            <p>
+              dia juga gak suka kepanasan, kalo kepanasan rasanya kayak sumala. terus dia juga sebenernya gak suka disakiti,
+              karena dia gak mau ada hal yang bikin hati dan kepercayaannya ikut rusak.
+            </p>
+          </div>
+
+          <div class="gallery-collage reveal">
+            <figure class="memory-card memory-card-lg">
+              <img src="images/gambar8.png" alt="Kenangan 1" loading="lazy" />
+              <figcaption>bocil wucu.</figcaption>
+            </figure>
+            <figure class="memory-card memory-card-sm">
+              <img src="images/gambar9.png" alt="Kenangan 2" loading="lazy" />
+              <figcaption>princess kara</figcaption>
+            </figure>
+            <figure class="memory-card memory-card-sm alt">
+              <img src="images/gambar6.jpg" alt="Kenangan 3" loading="lazy" />
+              <figcaption>pap lagi cekolah</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline section" id="memories">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Things to remember</p>
+            <h2>Do &amp; Don't</h2>
+          </div>
+
+          <div class="timeline-list do-dont-timeline">
+            <article class="timeline-item reveal text-only-item">
+              <div class="timeline-date">Do</div>
+              <div class="timeline-card text-card do-text-card">
+                <div class="timeline-content">
+                  <h3>Keep being you</h3>
+                  <p>
+                    Tetap jadi diri sendiri, tetap jadi cewe yang lembut, dan punya cara sendiri buat bikin dunia di sekitarnya jadi lebih indah.
+                    Nggak perlu jadi orang lain, karena kamu punya keunikan sendiri yang bikin kamu spesial.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal text-only-item">
+              <div class="timeline-date">Don't</div>
+              <div class="timeline-card text-card dont-text-card">
+                <div class="timeline-content">
+                  <h3>Don't cry a lot</h3>
+                  <p>
+                    Jangan nangis nangis terus, karena gak semua hal bisa kamu tangisin,
+                    u look so sad when you cry, and i know you are strong enough to face everything, so please don't cry a lot, okay?
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal text-only-item">
+              <div class="timeline-date">Do</div>
+              <div class="timeline-card text-card do-text-card">
+                <div class="timeline-content">
+                  <h3>keep being kind</h3>
+                  <p>
+                    Keep being kind, even when the world doesn't always treat you the same way.
+                    Stay soft, keep your heart warm, and never be afraid to show the sweet and lovely person you are.
+                    You don't have to be perfect to be special, just keep being you.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal text-only-item">
+              <div class="timeline-date">Don't</div>
+              <div class="timeline-card text-card dont-text-card">
+                <div class="timeline-content">
+                  <h3>Don't ignore your feelings</h3>
+                  <p>
+                    Terkadang yang paling penting bukan terus-terusan menahan semuanya sendirian, tapi belajar buat lebih peduli sama perasaan diri sendiri.
+                    Kamu nggak harus selalu terlihat kuat atau pura-pura baik-baik aja cuma karena nggak mau bikin orang lain khawatir.
+                    Kalau capek, istirahat, kalau sedih, nggak apa-apa buat nangis, dan kalau ada sesuatu yang bikin kamu nggak nyaman, kamu berhak buat mengakuinya.
+                    Jangan terlalu sibuk memahami perasaan orang lain sampai lupa kalau perasaan kamu sendiri juga penting.
+                    Kamu juga pantas didengar, dimengerti, dan diperlakukan dengan baik, jadi jangan lupa buat kasih diri sendiri waktu dan ruang untuk merasa bahagia.
+                    Pelan-pelan aja, ya, kamu nggak harus menyelesaikan semuanya sekarang, yang penting jangan sampai kamu terus-terusan mengabaikan diri sendiri demi membuat semua orang merasa baik-baik aja.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter section" id="letter">
+        <div class="container letter-wrap">
+          <div class="letter-envelope reveal">
+            <div class="envelope-top"></div>
+            <div class="envelope-body">
+              <div class="heart-icon">♡</div>
+              <h2>Puisi♡</h2>
+            </div>
+          </div>
+
+          <div class="letter-paper reveal" id="letterPaper">
+            <div class="letter-paper-inner">
+              <p>
+                ada dunia kecil yang penuh warna pink,
+                secangkir matcha, dan lagu Panasea
+                yang selalu punya cara sederhana
+                untuk membuat hari terasa lebih indah.
+              </p>
+              <p>
+                seseorang dengan hati yang baik,
+                yang mudah tertawa, tapi juga mudah menangis.
+                yang terkadang terlihat baik-baik saja,
+                meski ada banyak hal yang disimpan sendirian.
+              </p>
+              <p>
+                bukan karena terlalu lemah untuk menghadapi dunia,
+                hanya saja, ada perasaan yang tak mudah dijelaskan dengan kata-kata.
+                ada hal kecil yang bisa membuatnya bahagia,
+                dan ada hal sederhana yang diam-diam melukai hatinya.
+              </p>
+              <p>
+                ia hanya ingin disayangi dengan tulus,
+                didengarkan tanpa merasa berlebihan,
+                dan diperlakukan dengan lembut
+                tanpa harus takut akan datangnya luka.
+              </p>
+              <p>
+               semoga hati baik itu selalu menemukan alasan untuk tersenyum,
+              semoga hal-hal kecil tetap menjadi sumber bahagianya,
+                dan semoga ia tak pernah kehilangan dirinya sendiri
+                hanya karena seseorang tak tahu cara menjaganya.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>Made with love for Kara ♡</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+      </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Close gallery">×</button>
+      <button class="lightbox-nav prev" aria-label="Previous image">‹</button>
+      <img id="lightboxImage" src="" alt="" />
+      <button class="lightbox-nav next" aria-label="Next image">›</button>
+    </div>
+
+    <audio id="bgMusic" loop preload="auto" autoplay>
+      <source src="music/Rumahsakit_-_Panasea_(mp3.pm).mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
