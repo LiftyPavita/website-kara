@@ -1000,7 +1000,7 @@ p {
   }
 
   .gallery-feature {
-    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .timeline-item {
