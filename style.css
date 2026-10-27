@@ -623,18 +623,19 @@ p {
 
 .gallery-collage {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 220px 1fr;
   gap: 1rem;
-  align-items: center;
+  align-items: stretch;
 }
 
 .memory-card {
   position: relative;
   padding: 0.7rem 0.7rem 1rem;
   border-radius: 26px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.72);
   box-shadow: 0 20px 35px rgba(255, 155, 190, 0.12);
   border: 1px solid rgba(255, 105, 180, 0.08);
+  overflow: hidden;
 }
 
 .memory-card img {
@@ -648,18 +649,28 @@ p {
   margin-top: 0.75rem;
   font-size: 0.9rem;
   color: rgba(81, 51, 73, 0.8);
+  text-align: center;
 }
 
 .memory-card-lg {
   grid-row: span 2;
+  background: rgba(248, 231, 238, 0.9);
+  border-radius: 30px;
+  padding: 0.9rem;
 }
 
 .memory-card-lg img {
   height: 430px;
+  border-radius: 20px;
+}
+
+.memory-card-sm {
+  min-height: 180px;
 }
 
 .memory-card-sm img {
-  height: 200px;
+  height: 180px;
+  border-radius: 16px;
 }
 
 .memory-card-sm.alt {
@@ -700,48 +711,45 @@ p {
   }
 
   .gallery-collage {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
     width: 100%;
-    grid-template-columns: none;
-    gap: 1rem;
   }
 
   .memory-card {
-    display: block;
     width: 100%;
     max-width: 100%;
-    margin: 0 0 1rem;
-    padding: 0.6rem 0.6rem 0.8rem;
+    margin: 0;
+    padding: 0.55rem 0.55rem 0.8rem;
     border-radius: 18px;
   }
 
   .memory-card-lg,
   .memory-card-sm {
     grid-row: auto;
+    transform: none;
   }
 
   .memory-card-lg img,
   .memory-card-sm img {
     width: 100%;
-    height: clamp(230px, 46vw, 340px);
+    height: clamp(220px, 42vw, 320px);
+    min-height: 220px;
     aspect-ratio: 4 / 3;
-  }
-
-  .memory-card-sm.alt {
-    transform: none;
   }
 }
 
 @media (max-width: 480px) {
   .memory-card {
-    padding: 0.5rem 0.5rem 0.75rem;
+    padding: 0.45rem 0.45rem 0.8rem;
     border-radius: 16px;
-    margin-bottom: 0.85rem;
   }
 
   .memory-card-lg img,
   .memory-card-sm img {
-    height: clamp(200px, 52vw, 270px);
+    height: clamp(190px, 52vw, 260px);
+    min-height: 190px;
   }
 
   .memory-card figcaption {
