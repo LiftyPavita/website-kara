@@ -207,106 +207,106 @@ if (backToTop) {
 
 const moodMessages = {
   sad: [
-    "hey, it's okay if today isn't your day, okay? you don't have to be strong all the time. ♡",
-    "if all you can do today is get through the day, that's enough. i'm proud of you.",
-    "come here, pretend i'm giving you the biggest hug ever. no explanations needed. 🧸",
-    "you don't have to fix everything tonight. take a breath, little one. one thing at a time.",
-    "your feelings aren't a burden. you deserve kindness, especially from yourself.",
-    "it's okay to be sad and still be lovable. nothing in you is too much for love.",
-    "you are allowed to slow down. the world can wait for a minute while you catch your breath.",
-    "tiny steps count. even if today feels messy, you are still doing your best.",
-    "please let yourself cry if you need to. tears do not make you weak. they make you human.",
-    "the heaviness is real, but it is not permanent. even soft days can still end gently.",
-    "you don't have to explain the ache. being tired of hurting is enough reason to rest.",
-    "maybe today is not for being brave. maybe today is just for being gentle.",
-    "if your heart feels like it fell apart, that's okay. we can put it back together slowly.",
-    "i know today feels ugly and loud inside. still, you are worthy of softness.",
-    "no one has to earn a break from sadness. you are allowed to be tender with yourself."
+    "hari ini memang lagi berat, dan itu nggak berarti kamu lemah. kamu masih manusia, dan manusia boleh capek, boleh nangis, boleh merasa lelah. ♡",
+    "kalau hari ini kamu cuma mau bertahan sampai malam, itu udah cukup. kamu nggak perlu kuat terus menerus.",
+    "kalau ada yang bikin kamu sedih sampai pengen menangis, itu juga wajar. kamu nggak harus menyembunyikan rasa sakit itu demi terlihat baik-baik aja.",
+    "jangan paksa diri buat baik-baik aja kalau hati kamu lagi remuk. biarin hari ini sedikit lebih lembut untukmu.",
+    "terkadang yang paling berat bukan cuma karena mantan, tapi karena kamu masih suka mengingat semuanya dan berharap semuanya bisa berubah.",
+    "kalau hari ini jelek, yaudah. ada hari yang memang nggak masuk akal buat dipaksakan senang. kamu masih boleh istirahat.",
+    "kamu nggak perlu menahan semua air mata cuma karena orang lain nggak paham. menangis itu manusiawi, bukan tanda lemah.",
+    "coba bayangin aku ada di sebelah kamu sambil bilang, 'udah, hari ini kamu cukup capek. kamu boleh istirahat dulu.'",
+    "jangan terlalu keras sama diri sendiri karena kamu sedang tidak baik-baik saja. kamu manusia, bukan mesin yang terus berfungsi.",
+    "aku tahu kamu mungkin masih terganggu sama banyak hal, tapi kamu tetap berhak merasa tenang nanti, walaupun sekarang rasanya berat.",
+    "kalau hari ini hati kamu lagi bersedih karena semua memori itu datang lagi, itu nggak salah. kamu cuma manusia yang masih merasakan.",
+    "mungkin sekarang kamu nggak butuh solusi, tapi butuh tempat untuk nangis dan menenangkan diri. itu sangat cukup.",
+    "semua rasa sakit itu nggak perlu kamu buktikan ke siapa pun. cukup, kamu tahu saja bahwa kamu sedang tidak nyaman, dan itu valid.",
+    "kadang yang paling menenangkan bukan jawaban, tapi paham bahwa hari ini memang lagi berat dan kamu nggak harus kuat sekaligus.",
+    "kalau kamu merasa sedih karena masa lalu, itu berarti kamu pernah sangat menyayangi. kamu tetap berhak diberi kasih sayang yang tenang."
   ],
   happy: [
-    "LOOK AT YOU BEING ALL HAPPY AND CUTE!! please keep this little sunshine safe. ☀️",
-    "i hope this happiness stays with you a little longer. you deserve moments like this.",
-    "quick!! take a mental screenshot of this moment. future you might need this memory. ♡",
-    "this is exactly the kind of joy that deserves to be noticed and held onto.",
-    "your smile is a tiny miracle today. please let it stay a little while longer.",
-    "you are glowing, and honestly? it's kind of unfair how cute this version of you is.",
-    "this is one of those gentle little wins that deserves a happy little dance. ✨",
-    "let yourself enjoy this. happiness doesn't need to be earned to be real.",
-    "save this little pocket of joy. it matters more than you think.",
-    "you look happy, and that makes my heart happy too. keep being soft and light.",
-    "today is a good reminder that small joys can be giant magic.",
-    "there is something really sweet about being this warm and this bright. keep it close.",
-    "make room for this good feeling. it deserves a little celebration, even if it's tiny.",
-    "you deserve all the sunshine you are collecting today. don't let it pass by unnoticed.",
-    "even if you try to act cool, i can tell you are glowing. and honestly, i love it."
+    "wah, lihat kamu senang gini. semoga rasa ringan itu tetap tinggal lama di hati kamu, ya. ☀️",
+    "senyum kamu hari ini lucu banget, dan aku senang banget kalau hati kamu lagi tenang dan bahagia.",
+    "ayo simpan momen ini baik-baik. nanti kalau capek atau sedih, kamu bisa inget kalau dulu kamu pernah semangat seperti ini.",
+    "kamu lagi happy, dan itu hal yang layak banget dihargai. jangan buru-buru ngelupain momen kecil yang bikin hati hangat ini.",
+    "hari ini memang ada sesuatu yang bikin kamu kelihatan lebih ringan, dan itu bagus. biarin kamu menikmati itu sebentar.",
+    "senyum kamu hari ini tuh bikin semua terasa lebih lembut. semoga kamu terus punya alasan kecil untuk bahagia seperti ini.",
+    "cukup simpan momen ini di kepala. semoga kamu terus diberi hari-hari yang bikin hati kamu merasa ringan.",
+    "bahagia itu kadang datang dari hal-hal kecil yang nggak diduga. dan kamu pantas banget merasa itu hari ini.",
+    "semoga kamu nggak buru-buru menganggap hari ini biasa saja, karena hari yang bikin kamu senyum itu juga berharga.",
+    "jangan terlalu cepat mematikan perasaan senang ini. biarkan hati kamu menikmati rasa itu sebentar.",
+    "lihat kamu senyum lagi, rasanya seperti dunia jadi lebih ramah untuk beberapa saat.",
+    "semoga kamu selalu punya ruang untuk merayakan hal-hal kecil yang bikin kamu bahagia, ya.",
+    "kamu lagi bagus banget hari ini, dan aku cuma mau bilang—semoga kamu tetap semangat seperti ini dalam waktu lama.",
+    "senyummu hari ini bikin hati jadi tenang. jangan takut untuk menikmati momen yang bikin kamu merasa baik.",
+    "bahagia itu nggak harus besar, yang penting kamu merasa aman dan tenang di dalamnya."
   ],
   annoyed: [
-    "okay, grumpy little bunny. take a breath first, the world can wait for a minute. 😾",
-    "you are allowed to take a break from everyone. drink some water and protect your peace.",
-    "no need to reply to anyone right now. take your time until you feel a little better.",
-    "your irritation isn't a flaw. sometimes your body just needs space from extra noise.",
-    "it's okay to be annoyed. just don't let the grumpiness steal all your energy today.",
-    "little mood alert: your peace is important. leave the chaos alone for a while.",
-    "take a sec and let the bad energy pass. you don't owe anyone your sparkle while you're irritated.",
-    "sometimes the most loving thing is saying, 'not today, not this version of me.'",
-    "you can be mad and still deserve a soft landing. the world can be a little less loud.",
-    "no need to be extra polite while your patience is running low. rest for a bit.",
-    "if today feels a little too sharp, that's allowed. you don't have to smooth it all away.",
-    "you can be annoyed without being mean. your feelings are still valid.",
-    "take the room, and take the silence. sometimes the kindest thing is a little distance.",
-    "grumpy isn't wrong. it just means your heart needs a smaller, calmer space for a while.",
-    "breathe in, drop the extra weight, and let your mood calm down before you decide anything major."
+    "oke, kalau kamu lagi bete, itu nggak salah. kamu boleh marah, kamu boleh kesel, kamu boleh pengen sendiri dulu.",
+    "kalau hari ini kamu lagi kepanasan atau pengen meledak karena sesuatu, jangan dipaksa baik-baik aja dulu. ambil napas, lalu ambil ruang.",
+    "kamu nggak harus terus sabar kalau hari ini memang bikin kamu nyolot. selah dulu, nanti baru atur ulang semuanya.",
+    "jangan dipaksa ceria kalau hati kamu lagi sebel. kadang yang kamu butuh cuma udara yang lebih sejuk dan waktu yang lebih tenang.",
+    "kalau ada hal yang bikin kamu kesal, nggak perlu semua yang lain ikut ditanggung. kamu boleh marah sempat, tapi jangan lupa kamu tetap berhak tenang.",
+    "capek itu bisa muncul dalam bentuk kesal. kamu nggak salah. cuma hari ini memang lagi nggak enak, itu aja.",
+    "kamu boleh sedikit jutek, boleh nyender dulu, boleh enggak mau ngomong. semua itu masih manusiawi.",
+    "kalau hari ini kamu gampang tersinggung, mungkin karena kamu memang sedang kelelahan atau terlalu banyak yang masuk ke kepala.",
+    "jangan terlalu keras sama diri sendiri cuma karena sedang tidak mood. orang yang sedang capek juga butuh ruang untuk marah.",
+    "kalau kamu lagi bete karena kepanasan, karena tugas numpuk, atau karena sesuatu yang nggak jelas, itu tetap valid. kamu nggak perlu jadi sempurna.",
+    "lepasin sedikit. hari ini memang bukan hari yang ramah, jadi nggak apa-apa kalau kamu ingin menghindar dulu sebentar.",
+    "kesel itu tanda kamu juga manusia yang merasa. jangan menekan semuanya sampai kamu merasa lebih berat sendirian.",
+    "kalau kamu lagi pengen diem, ambil waktu itu. bukan berarti kamu buruk, cuma hari ini kamu butuh lebih tenang.",
+    "marah bukan selalu karena hal besar. kadang itu cuma karena kamu sudah capek banget dan butuh ruang untuk bernapas.",
+    "jangan salahkan diri sendiri karena lagi bete. kadang itu hanya tanda kalau kamu sedang butuh pelan-pelan dan jauh dari keramaian."
   ],
   tired: [
-    "you have done enough for today, sweetheart. you don't need to earn your rest.",
-    "permission to do absolutely nothing for a little while: GRANTED. 💤",
-    "put that little head down for a moment. not everything needs to be solved tonight.",
-    "rest is not laziness. it is part of being human, especially when you are tired.",
-    "you can stop pushing for a while. your energy is not a test to pass.",
-    "it is okay to be tired. being drained does not mean you are failing.",
-    "your body is asking for gentleness. answer it without guilt.",
-    "if your brain feels a little dusty, that's okay. let it rest before you ask it to do more.",
-    "today does not need to be productive to be valid. a quiet day is still a good day.",
-    "rest is not a reward for being 'good enough'. it is a basic kindness to yourself.",
-    "you are allowed to be sleepy, slow, and soft. the world will still be there later.",
-    "take this as a permission slip to be cozy and low effort for a while.",
-    "your energy is not infinite. even tiny rest counts.",
-    "let the day be smaller, gentler, and less demanding for a little while.",
-    "sleepy hearts need soft blankets, warm drinks, and zero pressure."
+    "kamu udah capek, dan itu bukan tanda kamu kurang kuat. kamu cuma manusia, dan manusia memang butuh istirahat.",
+    "kalau hari ini kamu capenya bukan karena nggak semangat, tapi karena banyak hal masuk sekaligus, itu wajar.",
+    "tugas numpuk, pikiran berisik, dan badan yang lelah bisa bikin hati jadi ngga enak. kamu nggak salah karena capek.",
+    "izin buat istirahat dulu, ya. hari ini nggak perlu dipenuhi semua, cukup selamat sampai malam.",
+    "mungkin hari ini kamu capek karena muak sama semua hal, muak sama rutinitas, muak sama pikirin banyak hal. itu valid, sayang.",
+    "kamu nggak perlu terus memaksa diri buat produktif kalau hati dan tubuhmu sedang kehabisan tenaga.",
+    "tidur atau istirahat sebentar bukan tanda nganggur. itu tanda kamu sadar kalau diri kamu butuh dihargai.",
+    "kalau kepalamu berat karena mikirin tugas atau TKA atau hal-hal yang nyampah, itu artinya kamu memang sudah terlalu capek.",
+    "biarin hari ini lebih kecil. bukan berarti kamu gagal, cuma emang hari ini kamu butuh beristirahat lebih dulu.",
+    "kamu boleh minta waktu untuk tidak berpikir apa pun dulu. biarkan badan dan hati kamu kembali seimbang.",
+    "capek itu bukan soal malas. kadang itu cuma tanda kalau kamu sudah terlalu banyak menahan dan terlalu lama bertahan sendiri.",
+    "kalau hari ini badan kamu lelah, jangan dipaksa jadi orang yang sama seperti kemarin. cukup jadi diri yang lebih tenang.",
+    "selamatkan tenagamu. nggak semua yang harus selesai hari ini harus selesai hari ini juga.",
+    "kamu pantas untuk beristirahat tanpa merasa berdosa. benar, hari ini kamu sudah cukup bersusah payah.",
+    "biarkan pikiranmu beristirahat sebentar. dunia akan tetap ada nanti, bahkan kalau hari ini kamu memilih tenang dulu."
   ],
   lonely: [
-    "even on the quiet days, you are still someone worth knowing and loving. ♡",
-    "imagine a tiny bunny sitting beside you, keeping you company without asking a single question.",
-    "you don't need to be entertaining or cheerful to deserve someone's company.",
-    "sometimes you don't need a solution, you just need a little company and a gentle presence.",
-    "i hope you know that being alone right now does not make you less lovable.",
-    "if you need it, let this be a tiny virtual seat beside you. i'm here, quietly.",
-    "you deserve to be wanted in the softest, kindest, most ordinary ways.",
-    "even when the room feels empty, you are still not invisible.",
-    "let this message be a little cozy place to sit for a while. no pressure, no performance.",
-    "some hearts need company more than they need advice. you are allowed to need that.",
-    "it is okay to want someone to stay close for a little while and just listen.",
-    "being a little lonely does not mean you are too much. it means you need gentleness.",
-    "picture a warm blanket, a soft pillow, and someone thinking kindly of you right now.",
-    "you deserve quiet companionship, not just big moments of being adored.",
-    "even if no one says it out loud right now, you are still worth soft company."
+    "jangan merasa sendirian di tengah semua yang kamu tahan sendiri. kamu tetap punya ruang untuk dicintai dan ditemani, walau hari ini kamu merasa sepi.",
+    "kalau kamu merasa sendiri, bayangkan aku duduk di samping kamu, tidak ngomong banyak, cuma menemani sampai kamu merasa lebih ringan.",
+    "kamu nggak perlu selalu terlihat kuat biar dianggap baik. kamu juga berhak ditemani, dipahami, dan tidak ditinggal sendirian.",
+    "aku tahu kadang sendirian itu terasa ngga enak, tapi kamu nggak sedang sendirian sepenuhnya. ada orang yang tetap peduli, walau diam.",
+    "kamu nggak harus selalu bisa menyenangkan orang lain supaya pantas untuk ditemani. kamu sudah cukup berharga tanpa harus lucu dulu.",
+    "kalau hari ini hati kamu merasa sepi, mungkin yang kamu butuhkan bukan solusi, tapi kehadiran. dan itu wajar banget.",
+    "kamu masih berhak punya satu tempat yang terasa aman, walau cuma untuk hari ini. itu tidak terlalu banyak untuk diminta.",
+    "sepi bukan berarti tidak disayang. terkadang sepi itu cuma tanda bahwa kamu butuh sedikit lebih banyak perhatian ke diri sendiri.",
+    "bayangkan ini: ada satu orang yang duduk di sebelah kamu tanpa menuntut, tanpa menghakimi, hanya ingin kamu merasa sedikit lebih tenang.",
+    "jangan menutup diri terlalu rapat, ya. kadang yang kamu butuh bukan untuk menahan semuanya sendiri, tapi untuk merasa ada yang peduli.",
+    "kamu boleh merasa kesepian, tapi kamu nggak perlu menanggung sendirian. ada ruang yang tetap terbuka buat kamu merasa lebih aman.",
+    "kamu nggak terlalu banyak. kamu cuma manusia yang kadang butuh ditemani. itu normal, dan itu wajar.",
+    "kalau hari ini hati kamu terasa kosong, mungkin itu tanda kamu butuh rasa dekat, bukan hanya sekadar mencoba kuat.",
+    "jangan takut untuk mengakui kalau kamu butuh teman, setidaknya untuk sebentar. kamu berhak diingatkan bahwa kamu tidak sendirian.",
+    "meski hari ini terasa sunyi, kamu tetap berharga, tetap pantas untuk didengarkan, dan tetap layak untuk dicintai dengan lembut."
   ],
   hug: [
-    "sending you one ridiculously long virtual hug. you can stay here for as long as you need. 🫂",
-    "if i could, i'd wrap you in the softest blanket and let the world be quiet for a while.",
-    "this is your reminder that you deserve gentleness, affection, and care.",
-    "come here, little one. let this be the warmest, quietest hug you have all day.",
-    "you are allowed to be held gently in your thoughts. no need to be perfect for this.",
-    "i hope you feel the softness in this message. it is a hug, even from a little far away.",
-    "you deserve the kind of care that makes your shoulders drop a little.",
-    "if your heart needs a pause, let it rest in the warmth of this message for a while.",
-    "a tiny little hug from me, with all the gentleness i can give you today. ♡",
-    "i want the world to be kinder to you for a minute. may this card be your soft place.",
-    "you don't have to be brave enough for everything right now. just accept this hug.",
-    "may this message feel like a blanket, a pillow, and a hand on your back all at once.",
-    "you deserve to be comforted without needing to explain why you need it.",
-    "take this as permission to be cared for, even if just for a little while.",
-    "if you are feeling fragile, let this hug be a reminder that you are not alone in it."
+    "aku ingin peluk kamu dengan pelan, seperti bilang, 'tenang, kamu nggak harus kuat sekarang. cukup letakkan beban itu sebentar.' 🫂",
+    "kalau aku bisa, aku pasti bakal memeluk kamu dengan sangat lembut sampai kamu merasa sedikit lebih ringan, sedikit lebih tenang.",
+    "ini pelukan kecil untukmu. tidak perlu dijelaskan, tidak perlu dibenarkan. cukup rasa hangat yang kamu butuhkan hari ini.",
+    "kamu boleh merasa lelah, kamu boleh merasa capek, kamu boleh merasa ingin dipeluk. dan itu benar-benar wajar.",
+    "mungkin hari ini kamu butuh lebih dari sekadar kata-kata. kamu butuh rasa aman, dan aku mau kamu tahu bahwa kamu berhak diberi itu.",
+    "peluk ini datangnya dari jauh, tapi semoga terasa hangat dan menenangkan seperti pelukan nyata.",
+    "jangan takut untuk menerima kasih sayang, walau hanya dari kata-kata yang lembut. hari ini kamu pantas merasa hangat.",
+    "biar aku jadi tempat paling aman untukmu sebentar. kamu boleh duduk di sini, rileks, dan tidak harus kuat dulu.",
+    "aku ingin kamu tahu bahwa ada ruang hangat yang siap menampungmu hari ini tanpa menghakimi, tanpa menuntut, tanpa memaksa.",
+    "pelukan ini bukan untuk menghapus semua rasa sakit, tapi untuk membantumu merasa sedikit lebih ringan dan sedikit lebih aman.",
+    "kalau hari ini kamu merasa ingin ditenangkan, ini dia pelukan kecil dari aku yang mungkin nggak bisa hadir secara nyata, tapi tetap hangat.",
+    "kamu nggak harus menghadapi semua sendirian. ada yang mau menenangkanmu dengan pelan, tanpa banyak tanya.",
+    "sedikit hangat, sedikit tenang, sedikit lebih baik. semoga itu yang kamu dapat dari kata-kata ini hari ini.",
+    "jangan menolak rasa yang baik hanya karena kamu merasa belum pantas. kamu pantas merasa dicintai, bahkan saat kamu sedang rapuh.",
+    "kalau semua hari ini terasa berat, anggap saja ini pelukan kecil yang aku kirimkan supaya kamu tahu kamu tidak sendirian."
   ]
 };
 
@@ -372,7 +372,7 @@ function renderFavoriteList() {
   if (!favorites.length) {
     const empty = document.createElement('div');
     empty.className = 'mood-favorites-empty';
-    empty.textContent = 'no favorite messages yet... maybe one of these little notes will stay with you soon. ♡';
+    empty.textContent = 'belum ada pesan favorit... mungkin nanti ada satu yang mau kamu simpan buat dibaca lagi, ya. ♡';
     moodFavoritesList.appendChild(empty);
     return;
   }
@@ -485,13 +485,13 @@ moodCopyButton.addEventListener('click', async () => {
   try {
     await navigator.clipboard.writeText(message);
     const original = moodCopyButton.textContent;
-    moodCopyButton.textContent = 'saved in your heart... and clipboard! ♡';
+    moodCopyButton.textContent = 'tercatat di hati... dan clipboard! ♡';
     setTimeout(() => {
       moodCopyButton.textContent = original;
     }, 1500);
   } catch (error) {
     const original = moodCopyButton.textContent;
-    moodCopyButton.textContent = 'copy not available on this browser';
+    moodCopyButton.textContent = 'copy nggak tersedia di browser ini';
     setTimeout(() => {
       moodCopyButton.textContent = original;
     }, 1600);
@@ -503,7 +503,7 @@ document.querySelectorAll('.mood-reaction').forEach((btn) => {
     document.querySelectorAll('.mood-reaction').forEach((item) => item.classList.remove('active'));
     btn.classList.add('active');
     const original = btn.textContent;
-    btn.textContent = 'saved in your heart ♡';
+    btn.textContent = 'tersimpan di hati ♡';
     setTimeout(() => {
       btn.textContent = original;
     }, 1200);
