@@ -498,16 +498,4 @@ moodCopyButton.addEventListener('click', async () => {
   }
 });
 
-document.querySelectorAll('.mood-reaction').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.mood-reaction').forEach((item) => item.classList.remove('active'));
-    btn.classList.add('active');
-    const original = btn.textContent;
-    btn.textContent = 'tersimpan di hati ♡';
-    setTimeout(() => {
-      btn.textContent = original;
-    }, 1200);
-  });
-});
-
 renderFavoriteList();
