@@ -207,14 +207,14 @@ if (backToTop) {
 
 const moodMessages = {
   sad: [
-    "hari ini memang lagi berat, dan itu nggak berarti kamu lemah. kamu masih manusia, dan manusia boleh capek, boleh nangis, boleh merasa lelah. ♡",
-    "kalau hari ini kamu cuma mau bertahan sampai malam, itu udah cukup. kamu nggak perlu kuat terus menerus.",
+    "hallow, kamu jangan sedih sedih yaa, aku tau berat banget buat kamu, but it's okay, semangat princess ♡",
+    "pasti lagi galau banget yaa, aku tau rasanya. tapi kamu nggak sendirian, aku ada di sini buat nemenin kamu.",
     "kalau ada yang bikin kamu sedih sampai pengen menangis, itu juga wajar. kamu nggak harus menyembunyikan rasa sakit itu demi terlihat baik-baik aja.",
     "jangan paksa diri buat baik-baik aja kalau hati kamu lagi remuk. biarin hari ini sedikit lebih lembut untukmu.",
-    "terkadang yang paling berat bukan cuma karena mantan, tapi karena kamu masih suka mengingat semuanya dan berharap semuanya bisa berubah.",
-    "kalau hari ini jelek, yaudah. ada hari yang memang nggak masuk akal buat dipaksakan senang. kamu masih boleh istirahat.",
+    "kalo caca buat kamu sedih lagi hari ini, maafin dia yaa cantik, jangan sedih sedih, SEMANGAT!",
+    "kenapa? ovt lagi nih soal caca? isokey jangan terlalu dipikirin yaa, aku tau kamu pasti bisa lewatin ini semua.",
     "kamu nggak perlu menahan semua air mata cuma karena orang lain nggak paham. menangis itu manusiawi, bukan tanda lemah.",
-    "coba bayangin aku ada di sebelah kamu sambil bilang, 'udah, hari ini kamu cukup capek. kamu boleh istirahat dulu.'",
+    "kalo ada yang ngeganjel di pikiran kamu, jangan dipendam sendiri. kamu berhak untuk mengekspresikan perasaanmu, walau itu sedih.",
     "jangan terlalu keras sama diri sendiri karena kamu sedang tidak baik-baik saja. kamu manusia, bukan mesin yang terus berfungsi.",
     "aku tahu kamu mungkin masih terganggu sama banyak hal, tapi kamu tetap berhak merasa tenang nanti, walaupun sekarang rasanya berat.",
     "kalau hari ini hati kamu lagi bersedih karena semua memori itu datang lagi, itu nggak salah. kamu cuma manusia yang masih merasakan.",
@@ -319,183 +319,191 @@ const moodIcons = {
   hug: '🫂'
 };
 
-const moodHistory = {};
+const moodHistory = {
+  caca: [],
+  sekolah: [],
+  burnout: [],
+  rumah: []
+};
+
 const favoriteKey = 'mood-favorite-messages';
-let activeMood = null;
-let activeCategoryMessages = [];
-let currentMessageIndex = 0;
+let activeReason = 'caca';
 let favorites = JSON.parse(localStorage.getItem(favoriteKey) || '[]');
 
+const reasonButtons = document.querySelectorAll('.reason-option');
+const noteInput = document.getElementById('moodNoteInput');
+const generateBtn = document.querySelector('.mood-generate-btn');
 const moodPanel = document.getElementById('moodMessagePanel');
-const moodGrid = document.getElementById('moodCardGrid');
 const moodText = document.getElementById('moodMessageText');
 const moodArt = document.getElementById('moodMessageArt');
+const moodReasonBadge = document.getElementById('moodReasonBadge');
 const moodFavoriteButton = document.querySelector('.mood-favorite-button');
 const moodNextButton = document.querySelector('.mood-next-button');
-const moodBackButton = document.querySelector('.mood-back-button');
 const moodCopyButton = document.querySelector('.mood-copy-button');
 const moodCloseButton = document.querySelector('.mood-close-btn');
 const moodFavoritesToggle = document.querySelector('.mood-favorites-toggle');
 const moodFavoritesPanel = document.getElementById('moodFavoritesPanel');
 const moodFavoritesList = document.getElementById('moodFavoritesList');
 const moodCloseFavorites = document.querySelector('.mood-close-favorites');
-const surpriseBtn = document.querySelector('.mood-surprise-btn');
 
-function getMoodMessages(mood) {
-  if (!moodHistory[mood]) moodHistory[mood] = [];
-  return moodMessages[mood].filter((message) => !moodHistory[mood].includes(message));
+const moodTemplates = {
+  caca: [
+    "kalau lagi sedih karena caca, itu wajar. kamu nggak harus memaksa diri buat terlihat kuat. yang kamu rasain itu nyata, dan kamu juga berhak dibuat tenang.",
+    "mungkin memang capek banget kalau hati kamu terus teringat sama dia. tapi jangan salahin diri sendiri karena masih merasa. kamu cuma manusia, bukan orang yang terlalu berlebihan.",
+    "kalau caca yang bikin kamu nangis, mungkin yang kamu butuh bukan jawabannya, tapi waktu untuk merasa aman dan tidak terus diingat-ingat.",
+    "kamu bisa sedih karena seseorang yang pernah bikin kamu nyaman. itu bukan tanda kamu terlalu berharap, itu cuma tanda kamu pernah sangat care.",
+    "aku tahu rasanya berat ketika hati masih kepikiran orang yang sama. tapi kamu tetap berhak pulih, walaupun prosesnya nggak mulus."
+  ],
+  sekolah: [
+    "kalau sekolah bikin kamu nyesek, itu bukan berarti kamu lemah. kamu cuma manusia, dan beban yang kamu tahan itu memang terlalu besar kalau ditanggung sendirian.",
+    "nggak perlu memaksakan diri terlihat baik kalau kamu sedang terhuyung-huyung. sekolah itu capek, dan kamu boleh capek juga.",
+    "mungkin kamu lagi merasa gagal karena tugas, target, dan tekanan datang sekaligus. itu wajar, tapi bukan tanda kalau kamu buruk.",
+    "kalau pikiran kamu sudah penuh sama sekolah, jangan merasa bersalah karena butuh istirahat. tubuhmu juga punya batasnya.",
+    "kamu nggak harus sempurna untuk diberi ruang tenang. hari ini kalau sekolah bikin kamu berat, cukup beri diri kamu waktu bernapas dulu."
+  ],
+  burnout: [
+    "kalau kamu burnout, itu bukan berarti kamu malas. itu berarti kamu sudah terlalu lama menahan semuanya tanpa istirahat yang benar-benar memulihkanmu.",
+    "kamu nggak harus tetap produktif kalau pikiran kamu sudah habis. kadang yang paling tepat adalah berhenti sebentar dan mengizinkan diri merasa berat.",
+    "burnout itu bentuk lelah yang nggak cuma soal tidur, tapi juga pikiran yang terus berdengung, badan yang capek, dan hati yang mulai terasa kosong. kamu boleh menahan dulu.",
+    "jangan terlalu keras sama diri sendiri hanya karena hari ini kamu ingin berhenti sejenak. beristirahat itu bukan kegagalan, itu pemulihan.",
+    "kalau hari ini rasanya nggak ada tenaga, itu artinya kamu memang sudah terlalu lama berjuang. kamu berhak pulih tanpa merasa bersalah."
+  ],
+  rumah: [
+    "kalau rumah jadi tempat yang bikin hati kamu sesak, maka kamu nggak salah kalau merasa nggak nyaman. rumah itu bukan cuma bangunan, tapi juga rasa aman. kalau itu mulai terasa berat, kamu boleh merasa lelah.",
+    "kalau ada masalah di rumah yang terus mengganggu, kamu nggak harus menahannya sendirian hanya karena pengen kelihatan kuat. kamu boleh merasa capek, sedih, dan ingin pergi sebentar.",
+    "mungkin rumah sekarang bukan tempat yang menenangkan, tapi itu bukan berarti kamu buruk. kamu cuma manusia yang ingin dilepas dari beban yang terlalu berat.",
+    "kalau di rumah kamu merasa nggak aman atau terlalu tegang, itu memang sesuatu yang berat. kamu berhak merasa lelah dan butuh ruang untuk diri sendiri.",
+    "kamu nggak perlu memelihara semua rasa sakit itu sendirian demi menjaga semuanya tetap baik. sebagian dari rasa yang kamu punya juga valid."
+  ]
+};
+
+const reasonLabels = {
+  caca: 'karena caca',
+  sekolah: 'karena sekolah',
+  burnout: 'karena burnout',
+  rumah: 'karena masalah rumah'
+};
+
+const reasonIcons = {
+  caca: '💭',
+  sekolah: '📚',
+  burnout: '🌧️',
+  rumah: '🏡'
+};
+
+function pickReasonMessage(reason) {
+  const list = moodTemplates[reason] || moodTemplates.caca;
+  return list[Math.floor(Math.random() * list.length)];
 }
 
-function pickNextMessage(mood) {
-  const available = getMoodMessages(mood);
-  if (!available.length) {
-    moodHistory[mood] = [];
-    activeCategoryMessages = [...moodMessages[mood]];
-    const randomIndex = Math.floor(Math.random() * activeCategoryMessages.length);
-    currentMessageIndex = randomIndex;
-    return activeCategoryMessages[randomIndex];
-  }
+function openMessagePanel(reason, message) {
+  if (!moodPanel || !moodText || !moodArt || !moodReasonBadge) return;
 
-  const randomIndex = Math.floor(Math.random() * available.length);
-  const chosen = available[randomIndex];
-  moodHistory[mood].push(chosen);
-  activeCategoryMessages = moodMessages[mood].filter((msg) => !moodHistory[mood].includes(msg));
-  if (!activeCategoryMessages.length) {
-    moodHistory[mood] = [];
-  }
-  return chosen;
-}
-
-function renderFavoriteList() {
-  moodFavoritesList.innerHTML = '';
-
-  if (!favorites.length) {
-    const empty = document.createElement('div');
-    empty.className = 'mood-favorites-empty';
-    empty.textContent = 'belum ada pesan favorit... mungkin nanti ada satu yang mau kamu simpan buat dibaca lagi, ya. ♡';
-    moodFavoritesList.appendChild(empty);
-    return;
-  }
-
-  favorites.forEach((item) => {
-    const row = document.createElement('div');
-    row.className = 'mood-favorite-item';
-    row.innerHTML = `<span>${item}</span><button type="button" aria-label="Remove favorite">×</button>`;
-    const removeBtn = row.querySelector('button');
-    removeBtn.addEventListener('click', () => {
-      favorites = favorites.filter((entry) => entry !== item);
-      localStorage.setItem(favoriteKey, JSON.stringify(favorites));
-      renderFavoriteList();
-    });
-    moodFavoritesList.appendChild(row);
-  });
-}
-
-function openMessagePanel(mood, message) {
-  activeMood = mood;
+  moodReasonBadge.textContent = reasonLabels[reason] || 'karena hari ini berat';
+  moodArt.textContent = reasonIcons[reason] || '💌';
   moodText.textContent = message;
-  moodArt.textContent = moodIcons[mood] || '✨';
 
   const isSaved = favorites.includes(message);
-  moodFavoriteButton.classList.toggle('active', isSaved);
-  moodFavoriteButton.textContent = isSaved ? '♥' : '♡';
+  if (moodFavoriteButton) {
+    moodFavoriteButton.classList.toggle('active', isSaved);
+    moodFavoriteButton.textContent = isSaved ? '♥' : '♡';
+  }
 
+  moodPanel.classList.remove('hidden');
   moodPanel.classList.add('visible');
 }
 
 function closeMessagePanel() {
+  if (!moodPanel) return;
   moodPanel.classList.remove('visible');
+  moodPanel.classList.add('hidden');
 }
 
-function showSurpriseMessage() {
-  const moods = Object.keys(moodMessages);
-  let mood = moods[Math.floor(Math.random() * moods.length)];
-  let notSame = false;
+function buildMessageFromInput() {
+  const finalMessage = pickReasonMessage(activeReason);
+  openMessagePanel(activeReason, finalMessage);
+}
 
-  if (activeMood) {
-    while (!notSame && moods.length > 1) {
-      const randomMood = moods[Math.floor(Math.random() * moods.length)];
-      if (randomMood !== activeMood) {
-        mood = randomMood;
-        notSame = true;
-      }
+reasonButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    reasonButtons.forEach((item) => item.classList.remove('active'));
+    button.classList.add('active');
+    activeReason = button.dataset.reason;
+  });
+});
+
+if (generateBtn) {
+  generateBtn.addEventListener('click', buildMessageFromInput);
+}
+
+if (moodNextButton) {
+  moodNextButton.addEventListener('click', () => {
+    const nextMessage = pickReasonMessage(activeReason);
+    openMessagePanel(activeReason, nextMessage);
+  });
+}
+
+if (moodCloseButton) {
+  moodCloseButton.addEventListener('click', closeMessagePanel);
+}
+
+if (moodFavoriteButton) {
+  moodFavoriteButton.addEventListener('click', () => {
+    const message = moodText.textContent;
+    if (!message) return;
+
+    if (favorites.includes(message)) {
+      favorites = favorites.filter((item) => item !== message);
+    } else {
+      favorites = [message, ...favorites];
     }
-  }
 
-  const msg = pickNextMessage(mood);
-  openMessagePanel(mood, msg);
+    localStorage.setItem(favoriteKey, JSON.stringify(favorites));
+    moodFavoriteButton.classList.toggle('active', favorites.includes(message));
+    moodFavoriteButton.textContent = favorites.includes(message) ? '♥' : '♡';
+    renderFavoriteList();
+  });
 }
 
-moodGrid.addEventListener('click', (event) => {
-  const card = event.target.closest('.mood-card');
-  if (!card) return;
+if (moodCopyButton) {
+  moodCopyButton.addEventListener('click', async () => {
+    const message = moodText.textContent;
+    if (!message) return;
 
-  const mood = card.dataset.mood;
-  const message = pickNextMessage(mood);
-  openMessagePanel(mood, message);
-});
+    try {
+      await navigator.clipboard.writeText(message);
+      const original = moodCopyButton.textContent;
+      moodCopyButton.textContent = 'tercatat di hati...';
+      setTimeout(() => {
+        moodCopyButton.textContent = original;
+      }, 1200);
+    } catch (error) {
+      const original = moodCopyButton.textContent;
+      moodCopyButton.textContent = 'copy gagal';
+      setTimeout(() => {
+        moodCopyButton.textContent = original;
+      }, 1300);
+    }
+  });
+}
 
-moodNextButton.addEventListener('click', () => {
-  if (!activeMood) return;
-  const nextMessage = pickNextMessage(activeMood);
-  openMessagePanel(activeMood, nextMessage);
-});
+if (moodFavoritesToggle) {
+  moodFavoritesToggle.addEventListener('click', () => {
+    renderFavoriteList();
+    if (moodFavoritesPanel) {
+      moodFavoritesPanel.classList.remove('hidden');
+      moodFavoritesPanel.classList.add('visible');
+    }
+  });
+}
 
-moodBackButton.addEventListener('click', () => {
-  closeMessagePanel();
-});
-
-moodCloseButton.addEventListener('click', () => {
-  closeMessagePanel();
-});
-
-moodFavoriteButton.addEventListener('click', () => {
-  if (!activeMood || !moodText.textContent) return;
-
-  const message = moodText.textContent;
-  if (favorites.includes(message)) {
-    favorites = favorites.filter((entry) => entry !== message);
-  } else {
-    favorites = [message, ...favorites];
-  }
-
-  localStorage.setItem(favoriteKey, JSON.stringify(favorites));
-  moodFavoriteButton.classList.toggle('active', favorites.includes(message));
-  moodFavoriteButton.textContent = favorites.includes(message) ? '♥' : '♡';
-  renderFavoriteList();
-});
-
-moodFavoritesToggle.addEventListener('click', () => {
-  renderFavoriteList();
-  moodFavoritesPanel.classList.add('visible');
-});
-
-moodCloseFavorites.addEventListener('click', () => {
-  moodFavoritesPanel.classList.remove('visible');
-});
-
-surpriseBtn.addEventListener('click', () => {
-  showSurpriseMessage();
-});
-
-moodCopyButton.addEventListener('click', async () => {
-  const message = moodText.textContent;
-  if (!message) return;
-
-  try {
-    await navigator.clipboard.writeText(message);
-    const original = moodCopyButton.textContent;
-    moodCopyButton.textContent = 'tercatat di hati... dan clipboard! ♡';
-    setTimeout(() => {
-      moodCopyButton.textContent = original;
-    }, 1500);
-  } catch (error) {
-    const original = moodCopyButton.textContent;
-    moodCopyButton.textContent = 'copy nggak tersedia di browser ini';
-    setTimeout(() => {
-      moodCopyButton.textContent = original;
-    }, 1600);
-  }
-});
+if (moodCloseFavorites) {
+  moodCloseFavorites.addEventListener('click', () => {
+    if (moodFavoritesPanel) {
+      moodFavoritesPanel.classList.remove('visible');
+      moodFavoritesPanel.classList.add('hidden');
+    }
+  });
+}
 
 renderFavoriteList();

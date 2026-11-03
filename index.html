@@ -262,74 +262,42 @@
       <section class="mood-section" id="mood-section" aria-label="Little cards for your feelings">
         <div class="mood-shell">
           <div class="mood-header reveal">
-            <p class="mood-kicker">untuk hatimu</p>
-            <h2>how u feel today, cutiee? 🎀</h2>
-            <p class="mood-subtitle">Pilih kartu kecilnya. Aku tinggalkan beberapa kata untukmu, untuk perasaan apa pun yang ada di hati kamu hari ini. ♡</p>
+            <p class="mood-kicker">catatan kecil buat kamu</p>
+            <h2>lagi sedih karena apa, princess? 💌</h2>
+            <p class="mood-subtitle">nggak perlu pakai yang bagus-bagus. cukup pilih yang paling pas, lalu tulis satu kalimat kecil kalau mau. nanti aku buatkan kata-kata yang cocok buat hari itu. ♡</p>
           </div>
 
           <div class="mood-toolbar reveal">
-            <button class="mood-surprise-btn" type="button">Aku nggak tahu perasaanku... surprise me! ♡</button>
-            <button class="mood-favorites-toggle" type="button">Kartu favorit</button>
+            <button class="mood-favorites-toggle" type="button">Lihat pesan favorit</button>
           </div>
 
-          <div class="mood-card-grid reveal" id="moodCardGrid">
-            <button class="mood-card" type="button" data-mood="sad">
-              <span class="mood-card-decor mood-card-rain">☁️</span>
-              <span class="mood-card-emoji">🌧️</span>
-              <span class="mood-card-title">Saat Kamu Sedih</span>
-              <span class="mood-card-text">untuk hari yang berat, air mata yang diam, dan semua perasaan yang nggak harus kamu jelasin.</span>
-            </button>
+          <div class="mood-entry reveal" id="moodEntry">
+            <div class="mood-reason-grid" aria-label="Pilih alasan sedih">
+              <button class="reason-option active" type="button" data-reason="caca">caca</button>
+              <button class="reason-option" type="button" data-reason="sekolah">sekolah</button>
+              <button class="reason-option" type="button" data-reason="burnout">burnout</button>
+              <button class="reason-option" type="button" data-reason="rumah">rumah</button>
+            </div>
 
-            <button class="mood-card" type="button" data-mood="happy">
-              <span class="mood-card-decor mood-card-sun">✨</span>
-              <span class="mood-card-emoji">☀️</span>
-              <span class="mood-card-title">Saat Kamu Senang</span>
-              <span class="mood-card-text">untuk hal kecil yang bikin hati terasa hangat, ringan, dan penuh warna.</span>
-            </button>
-
-            <button class="mood-card" type="button" data-mood="annoyed">
-              <span class="mood-card-decor mood-card-paw">🐾</span>
-              <span class="mood-card-emoji">😾</span>
-              <span class="mood-card-title">Saat Kamu Kesal</span>
-              <span class="mood-card-text">untuk hari bad mood, emosi yang lagi nyolot, dan momen "biarin aku diem dulu".</span>
-            </button>
-
-            <button class="mood-card" type="button" data-mood="tired">
-              <span class="mood-card-decor mood-card-moon">🌙</span>
-              <span class="mood-card-emoji">💤</span>
-              <span class="mood-card-title">Saat Kamu Capek</span>
-              <span class="mood-card-text">untuk tubuh dan pikiran yang butuh istirahat, pelan, dan tanpa rasa bersalah.</span>
-            </button>
-
-            <button class="mood-card" type="button" data-mood="lonely">
-              <span class="mood-card-decor mood-card-bunny">🧸</span>
-              <span class="mood-card-emoji">🧸</span>
-              <span class="mood-card-title">Saat Kamu Kesepian</span>
-              <span class="mood-card-text">untuk momen yang butuh kehadiran, perhatian, dan rasa ditemani.</span>
-            </button>
-
-            <button class="mood-card" type="button" data-mood="hug">
-              <span class="mood-card-decor mood-card-heart">♡</span>
-              <span class="mood-card-emoji">🫂</span>
-              <span class="mood-card-title">Saat Kamu butuh Peluk</span>
-              <span class="mood-card-text">untuk saat-saat kamu ingin merasa lebih hangat, lebih tenang, dan lebih disayangi.</span>
-            </button>
+            <div class="mood-entry-actions">
+              <button class="mood-generate-btn" type="button">Buat catatannya</button>
+            </div>
           </div>
 
           <div class="mood-message-panel hidden" id="moodMessagePanel" aria-live="polite">
             <div class="mood-message-box">
               <button class="mood-close-btn" type="button" aria-label="Close message">×</button>
               <div class="mood-message-header">
-                <span class="mood-message-badge">catatan kecil untukmu ♡</span>
+                <span class="mood-message-badge" id="moodReasonBadge">karena caca</span>
                 <button class="mood-favorite-button" type="button" aria-label="Save favorite">♡</button>
               </div>
 
-              <div class="mood-message-art" id="moodMessageArt">✨</div>
+              <div class="mood-message-art" id="moodMessageArt">💌</div>
               <p class="mood-message-text" id="moodMessageText"></p>
-              <p class="mood-message-footer">ambil yang kamu butuhkan dari kata-kata ini, ya? 🎀</p>
+              <p class="mood-message-footer">kalau hari ini berat, kamu boleh pelan-pelan dulu. kamu nggak harus kuat banget. ♡</p>
 
               <div class="mood-message-actions">
-                <button class="mood-next-button" type="button">Pesan kecil lain ♡</button>
+                <button class="mood-next-button" type="button">Baca yang lain</button>
                 <button class="mood-copy-button" type="button">Salin pesan</button>
               </div>
             </div>

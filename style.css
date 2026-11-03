@@ -1197,6 +1197,11 @@ p {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.mood-message-panel.hidden,
+.mood-favorites-panel.hidden {
+  display: none;
+}
+
 .mood-message-panel.visible,
 .mood-favorites-panel.visible {
   opacity: 1;
