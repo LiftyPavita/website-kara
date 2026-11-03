@@ -506,4 +506,15 @@ if (moodCloseFavorites) {
   });
 }
 
-renderFavoriteList();
+function renderFavoriteList() {
+  if (!moodFavoritesList) return;
+
+  if (!favorites.length) {
+    moodFavoritesList.innerHTML = '<div class="mood-favorites-empty">belum ada pesan favorit. nanti kamu bisa simpan yang paling nyentuh hati di sini.</div>';
+    return;
+  }
+
+  moodFavoritesList.innerHTML = favorites
+    .map((item) => `<div class="mood-favorite-item">${item}</div>`)
+    .join('');
+}
